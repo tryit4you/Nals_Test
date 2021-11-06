@@ -1,0 +1,17 @@
+  <!-- main app container -->
+  <div class="container">
+    <div class="card mt-4">
+        <h4 class="card-header">Thông tin tài khoản</h4>
+        <div class="card-body">
+            <h6>Thông tin tài khoản</h6>
+            <hr>
+            <!-- <div *ngIf="loading" class="spinner-border spinner-border-sm"></div> -->
+            <ul *ngIf="this.userinfo">
+                <li>Họ tên - {{this.userinfo.firstName }} {{this.userinfo.lastName}}</li>   
+                <li>Tên tài khoản - {{this.userinfo.username}}</li> 
+                <li>Token đăng nhập - {{tokenStore}}</li> 
+            </ul>
+        </div>
+    </div>
+    
+  </div>

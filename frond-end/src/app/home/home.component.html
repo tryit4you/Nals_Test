@@ -1,0 +1,29 @@
+
+  <!-- main app container -->
+  <div class="container">
+    <div class="card mt-4">
+        <h4 class="card-header">Đăng nhập thành công</h4>
+        <div class="card-body">
+            <h6>Danh sách tài khoản</h6>
+            <hr>
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Họ Tên</th>
+                    <th scope="col">Tên tài khoản</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let ac of this.users;let i=index">
+                    <td>{{i}}</td>
+                    <td>{{ac.firstName}} {{ac.lastName}}</td>
+                    <td>{{ac.username}}</td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+        </div>
+    </div>
+    
+  </div>

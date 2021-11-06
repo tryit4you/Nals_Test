@@ -1,0 +1,6 @@
+{
+    "config": {
+        "productUri": "http://10.0.42.50:8080",
+        "devUri": "https://localhost:44357"
+    }
+}
