@@ -1,29 +1,45 @@
 
   <!-- main app container -->
   <div class="container">
-    <div class="card mt-4">
-        <h4 class="card-header">Đăng nhập thành công</h4>
-        <div class="card-body">
-            <h6>Danh sách tài khoản</h6>
-            <hr>
-            <table class="table">
-                <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Họ Tên</th>
-                    <th scope="col">Tên tài khoản</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr *ngFor="let ac of this.users;let i=index">
-                    <td>{{i}}</td>
-                    <td>{{ac.firstName}} {{ac.lastName}}</td>
-                    <td>{{ac.username}}</td>
-                  </tr>
-                  
-                </tbody>
-              </table>
+    <div class=" mt-4">
+        <h4 class="leading">Well come! This website build with some technology</h4>
+        <div class="content">
+          <div class="row">
+              <div class="col-md-3">
+                       <img src="./../../assets/images/.net core.png" style="width: 230px;" alt=".net core 3.1">
+              </div>
+              <div class="col-md-9 mt-4">
+               <h4><a href="https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-5.0&tabs=visual-studio">ASP.NET documentation</a></h4>
+               <p>Learn to use ASP.NET Core to create web apps and services that are fast, secure, cross-platform,
+                  and cloud-based. Browse tutorials, sample code, fundamentals, API reference and more.   </div>  
+          </div>
+       </div>
+        <div class="content">
+           <div class="row">
+               <div class="col-md-3">
+                        <img src="./../../assets/images/angular_icon.png" style="width: 230px;" alt="Angular 11">
+               </div>
+               <div class="col-md-9 mt-4">
+                <h4><a href="https://angular.io/">Introduction to the Angular Docs</a></h4>
+                <p>Angular is an application design framework and development platform for creating efficient and sophisticated single-page apps.
+
+                  These Angular docs help you learn and use the Angular framework and development platform, from your first application to optimizing complex single-page apps for enterprises. Tutorials and guides include downloadable examples to accelerate your projects.</p>
+               </div>  
+           </div>
         </div>
+      
+       <div class="content">
+        <div class="row">
+            <div class="col-md-3">
+                     <img src="./../../assets/images/jwt.png" style="width: 230px;" alt="jwt">
+            </div>
+            <div class="col-md-9 mt-4">
+             <h4><a href="https://jwt.io/">Introduction to JSON Web Tokens</a></h4>
+             <p>JSON Web Tokens are an open, industry standard RFC 7519 method for representing claims securely between two parties.
+
+              JWT.IO allows you to decode, verify and generate JWT. </div>  
+        </div>
+     </div>
     </div>
     
   </div>

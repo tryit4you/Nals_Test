@@ -9,6 +9,7 @@ using back_end.Entities;
 using System.Net;
 using System.Text;
 using back_end.Utils;
+using back_end.MiddleWare;
 
 namespace back_end.Controllers
 {
@@ -38,12 +39,12 @@ namespace back_end.Controllers
             }
       
         }
-
+        [CustomAuthorize]
         [HttpGet("getall")]
-        public IActionResult getAll()
+        public ActionResult<IEnumerable<User>> getAll()
         {
             List<User> users = this._userCurdService.getAll().ToList();
-            return Ok(new JsonResult(users));
+            return Ok(users);
         }
 
     }

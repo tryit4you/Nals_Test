@@ -18,14 +18,12 @@ namespace back_end.Controllers
     public class UserController : ControllerBase
     {
         private IUserRepository _userService;
-        private IUserCurdRepo<User> _userCurdService;
-        public UserController(IUserRepository userService, IUserCurdRepo<User> userCurdRepo)
+        public UserController(IUserRepository userService)
         {
             this._userService = userService;
-            this._userCurdService = userCurdRepo;
         }
         [HttpPost("authenticate")]
-        public IActionResult Authenticate(AuthRequest model)
+        public ActionResult<SecureModel> Authenticate(AuthRequest model)
         {
             var response = _userService.auth(model);
 
@@ -37,7 +35,7 @@ namespace back_end.Controllers
         }
      
         [CustomAuthorize]
-        [HttpGet("users")]
+        [HttpGet("user")]
         public IActionResult GetUserInfo(String userid)
         {
             var users = _userService.getUserInfoById(userid);

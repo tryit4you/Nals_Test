@@ -10,9 +10,11 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProfileComponent } from './profile/profile.component';
+import { AccountComponent } from './account/account.component';
 @NgModule({
   declarations: [
     AppComponent,
+    AccountComponent,
   ],
   imports: [
     BrowserModule,
